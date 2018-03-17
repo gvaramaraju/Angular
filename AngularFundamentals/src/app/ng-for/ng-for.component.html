@@ -2,6 +2,11 @@
   <li *ngFor = "let i of social">{{i}}</li>
 </ul>
 
-<ul *ngFor = "let s of students; let counter = index">
+<!-- <ul *ngFor = "let s of students; let counter = index">
   <li *ngFor = "let d of students[counter]">{{d}}</li>
+</ul> -->
+
+<h3>List of Students</h3>
+<ul *ngFor = "let i of list_students">
+  <li>{{i.id}}---{{i.name}}---{{i.rollNo}}---{{i.email}}</li>
 </ul>
