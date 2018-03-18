@@ -1,0 +1,14 @@
+<form [formGroup]="dateForm">
+    <div formArrayName="dates">
+        <div *ngFor="let date of dateForm.get('dates').controls; let i=index" [formGroupName]="i" >
+          <!-- <input type="date" formControlName="date"> -->
+          <div class="ui-g-12 ui-md-4">
+              <p-calendar formControlName="date" [showIcon]="true"></p-calendar> <span style="margin-left:35px">{{date3|date}}</span>
+          </div>
+      
+          <input type="button" (click)="deleteDateField(i)">   
+        </div>
+      </div>
+    <input type="button" value="Add Date" (click)="addDateField()">
+  </form>
+

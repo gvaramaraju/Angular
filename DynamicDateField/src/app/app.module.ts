@@ -1,19 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms'
+import {AccordionModule} from 'primeng/accordion';     
+import {ReactiveFormsModule} from '@angular/forms';
+import {CalendarModule} from 'primeng/calendar';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { StudentDetailComponent } from './student-detail/student-detail.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    StudentDetailComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    AccordionModule,
     ReactiveFormsModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
